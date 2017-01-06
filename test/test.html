@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jWait</title>
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+
+    <style>
+
+        html {
+            background: #e3e3e3;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            line-height: 2em;
+        }
+
+        .content {
+            position: relative;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .blocks {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .block {
+            height: 400px;
+            background: #c4c4c4;
+            border-bottom: 1px solid #fff;
+            line-height: 400px;
+            font-size: 40px;
+            color: #fff;
+
+            -webkit-transition: all ease 1500ms;
+            -moz-transition: all ease 1500ms;
+            -ms-transition: all ease 1500ms;
+            -o-transition: all ease 1500ms;
+            transition: all ease 1500ms;
+        }
+
+        .block.active {
+            background: purple;
+        }
+
+        .codes {
+            width: 50%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        code {
+            box-shadow: 0 1px 2px #222;
+            margin: 0 10px;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+    </style>
+    <script src="./jquery.min.js"></script>
+    <script src="../jSee.js"></script>
+</head>
+<body>
+<h1>jSee.js Demo</h1>
+
+<div class="container">
+    <div class="codes">
+
+    <pre>
+    <code>
+        $('.block').jSee({
+        offsetEnter: 0,
+        offsetLeave: 0,
+        enter: function () {
+        var me = this;
+        setTimeout(function () {
+        $(me).addClass('active');
+        }, 300)
+
+        },
+
+        leave: function () {
+        var me = this;
+        setTimeout(function () {
+        $(me).removeClass('active');
+        }, 300);
+        }
+        });
+
+    </code>
+    </pre>
+    </div>
+    <div class="content">
+        <div class="blocks">
+
+            <div id="b_1" class="block">
+                block 1
+            </div>
+
+            <div id="b_2" class="block">
+                block 2
+            </div>
+
+            <div id="b_3" class="block">
+                block 3
+            </div>
+
+            <div id="b_4" class="block">
+                block 4
+            </div>
+
+            <div id="b_5" class="block">
+                block 5
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+
+    $(function () {
+
+        $('.block').jSee({
+            offsetEnter: 0,
+            offsetLeave: 0,
+            enter: function () {
+                var me = this;
+                setTimeout(function () {
+                    $(me).addClass('active');
+                }, 300)
+
+            },
+
+            leave: function () {
+                var me = this;
+                setTimeout(function () {
+                    $(me).removeClass('active');
+                }, 300);
+            }
+        });
+
+    });
+
+</script>
+</body>
+</html>

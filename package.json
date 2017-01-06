@@ -1,0 +1,27 @@
+{
+  "name": "j-see",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinzzc/jSee.git"
+  },
+  "keywords": [
+    "jquery",
+    "scroll"
+  ],
+  "author": "zzc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justinzzc/jSee/issues"
+  },
+  "homepage": "https://github.com/justinzzc/jSee#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}
