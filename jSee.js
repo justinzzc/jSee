@@ -59,6 +59,8 @@
      *  选项 object{ offset }
      *  offsetEnter[number]:纵向偏移量-进入
      *  offsetLeave[number]:纵向偏移量-离开
+     *  enter[function]:进入回调
+     *  leave[function]:离开回调
      */
     $.fn.jSee = function (opts) {
         $(this).each(function (i, item) {
