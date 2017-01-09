@@ -14,8 +14,6 @@
 
         var directionDown = true,
             last_st;
-
-
         function checkPass() {
             var st = $(window).scrollTop();
             if (typeof last_st == 'number') {
@@ -66,6 +64,7 @@
         $(this).each(function (i, item) {
             setViewPass(item, opts)
         });
+        return this;
     };
 
 

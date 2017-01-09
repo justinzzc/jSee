@@ -1,0 +1,25 @@
+{
+  "name": "j-see",
+  "description": "一款jQuery插件，监测dom元素在滚动的时候是进入视窗范围和离开视窗范围",
+  "main": "jSee.js",
+  "authors": [
+    "zzc"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "jquery",
+    "scroll"
+  ],
+  "homepage": "https://github.com/justinzzc/jSee",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "mdui": "^0.1.2"
+  }
+}

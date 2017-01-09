@@ -14,7 +14,6 @@
             enter: function () {
                 $(this).addClass('active');
             },
-
             leave: function () {
                 $(this).removeClass('active');
             }
@@ -27,7 +26,7 @@
  /**
      *
      * @param opts
-     *  选项 object{ offset }
+     *  选项 object{  }
      *  offsetEnter[number]:纵向偏移量-进入
      *  offsetLeave[number]:纵向偏移量-离开
      *  enter[function]:进入回调
