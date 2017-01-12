@@ -6,6 +6,9 @@
  
 ## 安装
 
+> bower install j-see
+
+
 ## 示例代码
 ~~~ javascript
   $('.block').jSee({
