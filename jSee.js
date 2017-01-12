@@ -5,6 +5,7 @@
 
     function setViewPass(ele, opts) {
 
+
         var mopts = $.extend({
             offsetEnter: 0,
             offsetLeave: 0,
@@ -14,6 +15,7 @@
 
         var directionDown = true,
             last_st;
+
         function checkPass() {
             var st = $(window).scrollTop();
             if (typeof last_st == 'number') {
@@ -61,8 +63,23 @@
      *  leave[function]:离开回调
      */
     $.fn.jSee = function (opts) {
+
+        var mOpts;
+        if (Object.prototype.toString.call(opts) === "[object Function]") {
+            mOpts = {
+                enter: opts
+            };
+            if (Object.prototype.toString.call(arguments[1]) === "[object Function]") {
+                mOpts.leave = arguments[1]
+            }
+        } else if (Object.prototype.toString.call(opts) === "[object Object]") {
+            mOpts = opts;
+        } else {
+            mOpts = {};
+        }
+
         $(this).each(function (i, item) {
-            setViewPass(item, opts)
+            setViewPass(item, mOpts)
         });
         return this;
     };

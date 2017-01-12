@@ -20,6 +20,17 @@
         });
 ~~~
 
+~~~ javascript
+  $('.block').jSee(
+            function () {
+                $(this).addClass('active');
+            },
+            function () {
+                $(this).removeClass('active');
+            }
+        );
+~~~
+
 
 ## 参数
 ~~~ javascript

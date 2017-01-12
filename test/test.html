@@ -78,23 +78,44 @@
 
     <pre>
     <code>
-        $('.block').jSee({
-        offsetEnter: 0,
-        offsetLeave: 0,
-        enter: function () {
-        var me = this;
-        setTimeout(function () {
-        $(me).addClass('active');
-        }, 300)
+        hljs.initHighlightingOnLoad();
 
-        },
+        $(function () {
 
-        leave: function () {
-        var me = this;
-        setTimeout(function () {
-        $(me).removeClass('active');
-        }, 300);
-        }
+            $('.block').not("#b_2").jSee({
+                offsetEnter: 0,
+                offsetLeave: 0,
+                enter: function () {
+                    var me = this;
+                    setTimeout(function () {
+                        $(me).addClass('active');
+                    }, 300)
+
+                },
+
+                leave: function () {
+                    var me = this;
+                    setTimeout(function () {
+                        $(me).removeClass('active');
+                    }, 300);
+                }
+            });
+
+            $("#b_2").jSee(
+                    function () {
+                        var me = this;
+                        setTimeout(function () {
+                            $(me).css('background', "red");
+                        }, 500)
+                    },
+                    function () {
+                        var me = this;
+                        setTimeout(function () {
+                            $(me).css('background', "#c1c1c1");
+                        }, 500)
+                    }
+            )
+
         });
 
     </code>
@@ -132,7 +153,7 @@
 
     $(function () {
 
-        $('.block').jSee({
+        $('.block').not("#b_2").jSee({
             offsetEnter: 0,
             offsetLeave: 0,
             enter: function () {
@@ -150,6 +171,20 @@
                 }, 300);
             }
         });
+
+        $("#b_2").jSee(function () {
+                    var me = this;
+                    setTimeout(function () {
+                        $(me).css('background', "red");
+                    }, 500)
+                },
+                function () {
+                    var me = this;
+                    setTimeout(function () {
+                        $(me).css('background', "#c1c1c1");
+                    }, 500)
+                }
+        )
 
     });
 
